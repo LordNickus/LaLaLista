@@ -17,7 +17,7 @@ a{
 
 .App-Home {
   background-color: #5754f3;
-  min-height: 100vh;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,19 +25,34 @@ a{
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .NoDuermo{
   background-color: #91ec96;
+  
 }
 .Subtitulos {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-size: calc(10px + 2vmin);
+    /* top: 0;
+  position: sticky; */
+  background-color: #5754f3;
+  
+}
+.TopNavegador{
+   top: 0;
+   z-index: 1;
+   position: sticky;
+}
+.Menu-abajo{
+  bottom: 0;
+  position: sticky;
 }
 
 .Botones-inicio{
   display: flex;
   flex-direction:column;
-  /* align-items: center; */
   justify-content: space-evenly;
 
 }
+

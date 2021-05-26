@@ -1,19 +1,26 @@
 import React from 'react';
 import './App.css';
 import Lista1 from './Lista1';
+import BottomNav from './barraBottom';
+import TopNav from './barraTop';
 
 const NoDuermoEn = ()=> {
     return (
-        <div className='NoDuermo'>
-           <img src='./logo512.png'alt='logo1' width='90px'height='90px'/>
-            <div className='Subtitulos'>
-                <h3>Lista no duermo en casa</h3>
-            </div>
-            <div>
-                <Lista1 />
-            </div>
+    <div className='NoDuermo'>
+        
+        <div className='TopNavegador'>
+             <TopNav />
         </div>
-    )
+                       
+        <div className='Listas'>
+             <Lista1 />
+        </div>
+
+        <div className='Menu-abajo'>
+             <BottomNav/>
+        </div>
+    </div>
+        )
 }
 
 export default NoDuermoEn
