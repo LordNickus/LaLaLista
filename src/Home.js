@@ -11,8 +11,9 @@ const Home = ()=> {
         <div className='App-Home'>
             <div>
                 <img src='./logo512.png'alt='logo1'/>
+                <h6>Version 1.01</h6>
                 <div className="Botones-inicio">
-                <Button variant="contained" color="secondary">
+                <Button variant="contained" color="primary">
                     <Link to='/NoDuermoEn'>Lista no duermo en casa</Link>
                  </Button>
                  <br/>
