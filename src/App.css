@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-Home {
+  background-color: #5754f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.NoDuermo{
+  background-color: #91ec96;
+}
+.Subtitulos {
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.Botones-inicio{
+  display: flex;
+  flex-direction:column;
+  /* align-items: center; */
+  justify-content: space-evenly;
+
+}
