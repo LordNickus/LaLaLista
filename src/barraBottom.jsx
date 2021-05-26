@@ -15,7 +15,8 @@ const useStyles = makeStyles({
     backgroundColor: "grey",
     display: "flex",
     justifyContent: "center",
-    paddingBottom: "6px"
+    paddingBottom: "6px",
+    color: "black",
   },
 });
 
@@ -25,7 +26,7 @@ export default function BottomNav() {
 
   return (
       <div className={classes.root}>
-    <IconButton color="primary" aria-label="Home"><HomeIcon /></IconButton>
+    <IconButton color="primary" aria-label="Home"><Link to='Home'><HomeIcon/></Link></IconButton>
     <IconButton color="primary" aria-label="Guardar"><SaveAltIcon /></IconButton>
     <IconButton color="primary" aria-label="Usuario"><PermIdentityOutlinedIcon /></IconButton>
 
