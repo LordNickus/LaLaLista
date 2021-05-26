@@ -12,12 +12,13 @@ function App() {
   return(
       <Router>
          <Switch>
+         <Route path="/NoDuermoEn">
+              <NoDuermoEn />
+          </Route>
           <Route path="/">
               <Home />
           </Route>
-          <Route path="/NoDuermoEn">
-              <NoDuermoEn />
-          </Route>
+          
           {/* <Route path="/Secciones/Tradicional">
               <Tradicional />
           </Route>

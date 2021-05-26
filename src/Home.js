@@ -3,7 +3,6 @@ import './App.css';
 
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
-import {Box, Grid} from '@material-ui/core';
 import './App.css';
 
 const Home = ()=> {
