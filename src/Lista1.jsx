@@ -12,63 +12,84 @@ import CommentIcon from '@material-ui/icons/Comment';
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
-    maxWidth: 360,
+    // maxWidth: 360,
     // backgroundColor: theme.palette.background.paper,
   },
 }));
 
 export default function CheckboxList() {
   const classes = useStyles();
-  const [checked, setChecked] = React.useState([0]);
+  const [items, setItems] = React.useState( [
+    {cheked: false, id: 1,name:'Barbijo'},
+    {cheked: false, id: 2,name:'Pantalon'},
+    {cheked: false, id: 3,name:'Zapatos'},
+    {cheked: false, id: 4,name:'Remera'},
+    {cheked: false, id: 5,name:'Camiseta'},
+    {cheked: false, id: 6,name:'Buzo'},
+    {cheked: false, id: 7,name:'Fichero'},
+    {cheked: false, id: 8,name:'Sube'},
+    {cheked: false, id: 9,name:'Anteojos'},
+    {cheked: false, id: 10,name:'Tupper'},
+    {cheked: false, id: 11,name:'Cubiertos'},
+    {cheked: false, id: 12,name:'Cargador'},
+    {cheked: false, id: 13,name:'Billetera'},
+    {cheked: false, id: 14,name:'Fruta x 2'},
+    
+ ]);
+ const [styles, setStyles] = React.useState( {
+  backgroundColor: '#f60',
+ }
 
-  const handleToggle = (value) => () => {
-    const currentIndex = checked.indexOf(value);
-    const newChecked = [...checked];
+ )
 
-    if (currentIndex === -1) {
-      newChecked.push(value);
-    } else {
-      newChecked.splice(currentIndex, 1);
-    }
+  const handleToggle = (value) => {
+      console.log (value)
+      var chequeado = items.map(function (dato){
+        if (dato.id == value.id){
+        if (dato.cheked == true){
+          dato.cheked = false
+        }
+        else {
+          dato.cheked = true
+        }}
+        return dato
 
-    setChecked(newChecked);
-  };
-  const Hoja1 = [
-     'Barbijo',
-     'Pantalon',
-     'Zapatos',
-     'Remera',
-     'Camiseta',
-     'Buzo',
-     'Fichero',
-     'Sube',
-     'Anteojos',
-     'Tupper',
-     'Cubiertos',
-     'Cargador',
-     'Billetera',
-     'Fruta x 2',
-     
-  ];
+      })
+      setItems (chequeado) 
+      var totalch = totalCheked (chequeado)
+        if(totalch){
+          setStyles({
+            backgroundColor: '#91ec96',
+          })
+        }
 
+      }
+     const totalCheked = (items) => {
+      return items.filter(item => item.cheked == true).length == items.length
+      
+     } 
+      
+
+
+    
   return (
-    <List className={classes.root}>
-      {Hoja1.map((value) => {
-        const labelId = Hoja1;
+    <List className={classes.root} style={styles}>
+      {items.map((value) => {
+        const labelId = items;
 
         return (
-          <ListItem key={value} role={undefined} dense button onClick={handleToggle(value)}>
+          <ListItem key={value.id} dense button onClick={()=>handleToggle(value)}>
             <ListItemIcon>
               <Checkbox
                 edge="start"
-                checked={checked.indexOf(value) !== -1}
+                checked={value.cheked}
                 tabIndex={-1}
                 disableRipple
-                inputProps={{ 'aria-labelledby': labelId }}
+                // inputProps={{ 'aria-labelledby': labelId }}
               />
             </ListItemIcon>
-            <ListItemText id={labelId} primary={`${value}`} />
-            <ListItemSecondaryAction>
+           <ListItemText id={labelId} primary={value.name} />
+           <ListItemSecondaryAction>
               <IconButton edge="end" aria-label="comments">
                 <CommentIcon />
               </IconButton>

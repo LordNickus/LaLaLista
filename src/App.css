@@ -30,6 +30,9 @@ a{
   background-color: #91ec96;
   
 }
+.Listas{
+  max-width: 425px;
+}
 .Subtitulos {
   display: flex;
   justify-content: space-around;
