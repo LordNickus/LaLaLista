@@ -1,19 +1,19 @@
 import React from 'react';
 import './App.css';
-import CheckboxList1 from './Lista1';
+import CheckboxList2 from './Lista2';
 import BottomNav from './barraBottom';
-import TopNav from './barraTop';
+import TopNav2 from './barraTop2';
 
-const NoDuermoEn = ()=> {
+const Super = ()=> {
     return (
     <div className='NoDuermo'>
         
         <div className='TopNavegador'>
-             <TopNav />
+             <TopNav2 />
         </div>
                        
         <div className='Listas'>
-             <CheckboxList1 />
+             <CheckboxList2 />
         </div>
 
         <div className='Menu-abajo'>
@@ -23,4 +23,4 @@ const NoDuermoEn = ()=> {
         )
 }
 
-export default NoDuermoEn
+export default Super

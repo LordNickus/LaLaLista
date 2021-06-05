@@ -7,6 +7,7 @@ import {
 
 import Home from './Home';
 import NoDuermoEn from './NoDuermoEn';
+import Super from './Super'
 
 function App() {
   return(
@@ -14,6 +15,9 @@ function App() {
          <Switch>
          <Route path="/NoDuermoEn">
               <NoDuermoEn />
+          </Route>
+          <Route path="/Super">
+              <Super />
           </Route>
           <Route path="/">
               <Home />

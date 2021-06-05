@@ -17,7 +17,7 @@ const Home = ()=> {
                  </Button>
                  <br/>
                  <Button variant="contained" color="secondary">
-                    <Link to=''>Dentro de poco... Lista Super!</Link>
+                    <Link to='/Super'>Dentro de poco... Lista Super!</Link>
                  </Button>
                  <br/>
                  <Button variant="contained" color="secondary">

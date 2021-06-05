@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function CheckboxList1() {
+export default function CheckboxList2() {
   const classes = useStyles();
   const [items, setItems] = React.useState( [
     {cheked: false, id: 1,name:'Barbijo'},
@@ -37,7 +37,7 @@ export default function CheckboxList1() {
     
  ]);
  const [styles, setStyles] = React.useState( {
-  backgroundColor: '#f60',
+  backgroundColor: '#F1948A',
  }
 
  )
